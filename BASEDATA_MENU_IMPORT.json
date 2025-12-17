@@ -1,0 +1,407 @@
+{
+  "menuConfig": {
+    "name": "基础数据管理菜单配置",
+    "description": "此配置用于在后端系统中导入或手动创建菜单项",
+    "rootMenu": {
+      "name": "基础数据管理",
+      "type": 1,
+      "path": "base-data",
+      "icon": "ep:setting",
+      "component": "Layout",
+      "sort": 100,
+      "visible": true,
+      "status": 0,
+      "keepAlive": false,
+      "alwaysShow": true
+    },
+    "secondLevelMenus": [
+      {
+        "name": "安防设备相关",
+        "type": 1,
+        "path": "security-device",
+        "icon": "ep:video-camera",
+        "component": "",
+        "sort": 1,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "监控设备",
+            "type": 2,
+            "path": "monitor-device",
+            "icon": "ep:video-camera",
+            "component": "base-data/security-device/monitor-device/index",
+            "componentName": "BaseDataMonitorDevice",
+            "permission": "base-data:monitor-device:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "边缘网关管理",
+            "type": 2,
+            "path": "edge-gateway",
+            "icon": "ep:connection",
+            "component": "base-data/security-device/edge-gateway/index",
+            "componentName": "BaseDataEdgeGateway",
+            "permission": "base-data:edge-gateway:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "分析任务",
+            "type": 2,
+            "path": "analysis-task",
+            "icon": "ep:data-analysis",
+            "component": "base-data/security-device/analysis-task/index",
+            "componentName": "BaseDataAnalysisTask",
+            "permission": "base-data:analysis-task:query",
+            "sort": 3,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "智能订阅",
+            "type": 2,
+            "path": "smart-subscription",
+            "icon": "ep:bell",
+            "component": "base-data/security-device/smart-subscription/index",
+            "componentName": "BaseDataSmartSubscription",
+            "permission": "base-data:smart-subscription:query",
+            "sort": 4,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "明厨亮灶",
+            "type": 2,
+            "path": "bright-kitchen",
+            "icon": "ep:food",
+            "component": "base-data/security-device/bright-kitchen/index",
+            "componentName": "BaseDataBrightKitchen",
+            "permission": "base-data:bright-kitchen:query",
+            "sort": 5,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "物联设备感知",
+        "type": 1,
+        "path": "iot-sensor",
+        "icon": "ep:platform",
+        "component": "",
+        "sort": 2,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "温湿度传感器",
+            "type": 2,
+            "path": "temperature-humidity",
+            "icon": "ep:partly-cloudy",
+            "component": "base-data/iot-sensor/temperature-humidity/index",
+            "componentName": "BaseDataTemperatureHumidity",
+            "permission": "base-data:temperature-humidity:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "周界报警主机",
+            "type": 2,
+            "path": "perimeter-alarm",
+            "icon": "ep:warning",
+            "component": "base-data/iot-sensor/perimeter-alarm/index",
+            "componentName": "BaseDataPerimeterAlarm",
+            "permission": "base-data:perimeter-alarm:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "物联设备",
+            "type": 2,
+            "path": "iot-device",
+            "icon": "ep:platform",
+            "component": "base-data/iot-sensor/iot-device/index",
+            "componentName": "BaseDataIoTDevice",
+            "permission": "base-data:iot-device:query",
+            "sort": 3,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "门禁设备管理",
+        "type": 1,
+        "path": "access-control",
+        "icon": "ep:lock",
+        "component": "",
+        "sort": 3,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "门禁设备",
+            "type": 2,
+            "path": "access-device",
+            "icon": "ep:lock",
+            "component": "base-data/access-control/access-device/index",
+            "componentName": "BaseDataAccessControlDevice",
+            "permission": "base-data:access-device:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "门禁时间段",
+            "type": 2,
+            "path": "time-period",
+            "icon": "ep:clock",
+            "component": "base-data/access-control/time-period/index",
+            "componentName": "BaseDataAccessControlTimePeriod",
+            "permission": "base-data:time-period:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "门禁权限组",
+            "type": 2,
+            "path": "permission-group",
+            "icon": "ep:user",
+            "component": "base-data/access-control/permission-group/index",
+            "componentName": "BaseDataAccessControlPermissionGroup",
+            "permission": "base-data:permission-group:query",
+            "sort": 3,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "道闸设备管理",
+        "type": 1,
+        "path": "barrier-gate",
+        "icon": "ep:guide",
+        "component": "",
+        "sort": 4,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "道闸设备",
+            "type": 2,
+            "path": "barrier-device",
+            "icon": "ep:guide",
+            "component": "base-data/barrier-gate/barrier-device/index",
+            "componentName": "BaseDataBarrierGateDevice",
+            "permission": "base-data:barrier-device:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "车场管理",
+            "type": 2,
+            "path": "parking-lot",
+            "icon": "ep:parking",
+            "component": "base-data/barrier-gate/parking-lot/index",
+            "componentName": "BaseDataParkingLot",
+            "permission": "base-data:parking-lot:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "系统资源管理",
+        "type": 1,
+        "path": "system-resource",
+        "icon": "ep:folder",
+        "component": "",
+        "sort": 5,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "分组管理",
+            "type": 2,
+            "path": "group",
+            "icon": "ep:folder",
+            "component": "base-data/system-resource/group/index",
+            "componentName": "BaseDataSystemGroup",
+            "permission": "base-data:group:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "场景地图",
+            "type": 2,
+            "path": "scene-map",
+            "icon": "ep:map-location",
+            "component": "base-data/system-resource/scene-map/index",
+            "componentName": "BaseDataSceneMap",
+            "permission": "base-data:scene-map:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "联动管理",
+            "type": 2,
+            "path": "linkage",
+            "icon": "ep:link",
+            "component": "base-data/system-resource/linkage/index",
+            "componentName": "BaseDataLinkage",
+            "permission": "base-data:linkage:query",
+            "sort": 3,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "事件配置",
+            "type": 2,
+            "path": "event-config",
+            "icon": "ep:setting",
+            "component": "base-data/system-resource/event-config/index",
+            "componentName": "BaseDataEventConfig",
+            "permission": "base-data:event-config:query",
+            "sort": 4,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "媒体服务",
+            "type": 2,
+            "path": "media-service",
+            "icon": "ep:video-play",
+            "component": "base-data/system-resource/media-service/index",
+            "componentName": "BaseDataMediaService",
+            "permission": "base-data:media-service:query",
+            "sort": 5,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "巡更设备配置",
+        "type": 1,
+        "path": "patrol",
+        "icon": "ep:compass",
+        "component": "",
+        "sort": 6,
+        "visible": true,
+        "status": 0,
+        "thirdLevelMenus": [
+          {
+            "name": "巡检器管理",
+            "type": 2,
+            "path": "patrol-device",
+            "icon": "ep:compass",
+            "component": "base-data/patrol/patrol-device/index",
+            "componentName": "BaseDataPatrolDevice",
+            "permission": "base-data:patrol-device:query",
+            "sort": 1,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "巡检点管理",
+            "type": 2,
+            "path": "patrol-point",
+            "icon": "ep:location",
+            "component": "base-data/patrol/patrol-point/index",
+            "componentName": "BaseDataPatrolPoint",
+            "permission": "base-data:patrol-point:query",
+            "sort": 2,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          },
+          {
+            "name": "线路管理",
+            "type": 2,
+            "path": "patrol-route",
+            "icon": "ep:route",
+            "component": "base-data/patrol/patrol-route/index",
+            "componentName": "BaseDataPatrolRoute",
+            "permission": "base-data:patrol-route:query",
+            "sort": 3,
+            "visible": true,
+            "status": 0,
+            "keepAlive": true
+          }
+        ]
+      },
+      {
+        "name": "建筑区域配置",
+        "type": 2,
+        "path": "building-area",
+        "icon": "ep:office-building",
+        "component": "base-data/building-area/index",
+        "componentName": "BaseDataBuildingArea",
+        "permission": "base-data:building-area:query",
+        "sort": 7,
+        "visible": true,
+        "status": 0,
+        "keepAlive": true
+      }
+    ]
+  },
+  "notes": {
+    "type说明": {
+      "0": "按钮",
+      "1": "目录",
+      "2": "菜单"
+    },
+    "status说明": {
+      "0": "正常",
+      "1": "停用"
+    },
+    "visible说明": {
+      "true": "显示",
+      "false": "隐藏"
+    },
+    "keepAlive说明": {
+      "true": "缓存",
+      "false": "不缓存"
+    },
+    "重要提示": [
+      "1. 在后端系统管理 → 菜单管理中，按照层级依次创建菜单",
+      "2. 一级菜单的 component 必须是 'Layout'",
+      "3. 二级目录菜单的 component 为空字符串",
+      "4. 三级菜单（实际页面）的 component 是相对于 src/views 的路径",
+      "5. 路由地址(path)不需要加前缀斜杠，系统会自动拼接完整路径",
+      "6. 组件名称(componentName)用于路由缓存，建议使用驼峰命名",
+      "7. 权限标识(permission)格式：模块:功能:操作，如 base-data:monitor-device:query"
+    ]
+  }
+}
+
